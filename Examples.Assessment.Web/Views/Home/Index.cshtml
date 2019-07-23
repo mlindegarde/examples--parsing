@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Data";
+}
+
+<p>
+    Sort Method:
+    <a href="?sort=CompanyName">Company Name</a> |
+    <a href="?sort=YearsInBusiness">Years In Business</a> |
+    <a href="?sort=YearsInBusinessThenCompanyName">Years In Business Then Company Name</a>
+</p>
+
+<p>
+    <table>
+        <thead>
+            <tr>
+                <th>CompanyName</th>
+                <th>Years In Business</th>
+                <th>Contact Name</th>
+                <th>Contact Phone</th>
+                <th>Contact Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var customer in Model)
+            {
+                <tr>
+                    <td>@customer.CompanyName</td>
+                    <td>@customer.YearsInBusiness</td>
+                    <td>@customer.ContactName</td>
+                    <td>@customer.ContactPhone</td>
+                    <td>@customer.ContactEmail</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</p>
